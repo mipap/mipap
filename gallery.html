@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MIPAP-DESIGN-WEBSITE</title>
+
+        <link rel="icon" href="img/serbia.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/welcome.css">
+        <link rel="stylesheet" href="css/gallery.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Material+Icons"/> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    
+        <style>
+            html,body{
+background-image: url(img/backgroundBg.jpg);
+position:relative;
+height:100%;
+font-family:'Lato', sans-serif;
+margin:0;
+padding:0;
+}
+.page{
+font-family:'Lato', sans-serif;
+display:block;
+float:left;
+position:relative;
+overflow:hidden;
+width:100%;
+height:100%;
+}
+.loaded{
+overflow-y:auto;
+}
+.main{
+display:none;
+}
+.tl,.tr,.bl,.br{
+display:block;
+position:absolute;
+width:100%;
+height:100%;
+background:url(img/backgroundBg.jpg) no-repeat center center fixed #000;
+-moz-background-size:cover;
+background-size:cover;
+}
+/* top left*/
+.tl{
+top:0;
+top:-50%;
+left:-50%;
+}
+/* top right*/
+.tr{
+top:-50%;
+left:50%;
+}
+/* botton left*/
+.bl{
+top:50%;
+left:50%;
+}
+/* botton right*/
+.br{
+top:50%;
+left:-50%;
+}
+.enter:after,
+.enter:hover:after,
+.enter,.enter:hover{
+-webkit-transition:all 1s ease;
+-moz-transition:all 1s ease;
+-o-transition:all 1s ease;
+transition:all 1s ease;
+}
+.enter{
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+width: 100px;
+height: 100px;
+background-color: #2A2A2B;
+background-color: rgba(17, 17, 17, 0.67);
+z-index: 999999999;
+text-align: center;
+line-height: 100px;
+text-decoration: none;
+color: #FFF;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+-webkit-box-shadow: 0 0 15px 2px #000;
+-moz-box-shadow: 0 0 15px 2px #000;
+box-shadow: 0 0 15px 2px #000;
+}
+.enter:after {
+content: " ";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+width: 80px;
+height: 80px;
+background-color: #3FB4BE;
+background-color: rgba(0, 235, 255, 0.44);
+z-index: 999999999;
+text-align: center;
+line-height: 80px;
+text-decoration: none;
+color: #FFF;
+-webkit-border-radius: 100%;
+-moz-border-radius: 100%;
+border-radius: 100%;
+-webkit-box-shadow: 0 0 15px 2px #000;
+-moz-box-shadow: 0 0 15px 2px #000;
+box-shadow: 0 0 15px 2px #000;
+}
+.enter:hover{
+-webkit-box-shadow:0 0 4px 4px #3FB4BE;
+-moz-box-shadow:0 0 4px 4px #3FB4BE;
+box-shadow:0 0 4px 4px #3FB4BE;
+}
+.enter:hover:after{
+background-color: #2A2A2B;
+background-color: rgba(17, 17, 17, 0.67);
+}
+.hideThis{
+-webkit-box-shadow:0 0 0 0 #3FB4BE;
+-moz-box-shadow:0 0 0 0 #3FB4BE;
+box-shadow:0 0 0 0 #3FB4BE;
+opacity:0;
+z-index:-5;
+}
+/* Layout
+============================== */
+
+*, *:before, *:after{
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+::-webkit-scrollbar{
+background-color:#000;
+width:5px;
+height:5px;
+}
+::-webkit-scrollbar-thumb{
+height:10px;
+background-color:#333;
+}
+html{
+font:100%/1.5 "lato", sans-serif;
+font-weight:400;
+text-rendering:optimizeLegibility;
+-webkit-font-smoothing:antialiased;
+}
+@media (min-width: 40rem){
+html{
+font-size:112%;
+}
+}
+@media (min-width: 64rem){
+html{
+font-size:120%;
+}
+}
+body{
+background-color:#fff;
+color:#555;
+}
+.container{
+margin:0 auto;
+max-width:53rem;
+width:90%;
+}
+/* Header
+================================== */
+
+body{
+background:url(img/backgroundBg.jpg) no-repeat center center fixed #ecf0f1;
+text-align:center;
+-moz-background-size:cover;
+background-size:cover;
+}
+.intro{
+margin:2rem 0;
+}
+@media (min-width: 40rem){
+.intro{
+margin:4rem 0;
+}
+}
+header h1{
+color:#fff;
+padding:0.4rem 0.6rem;
+display: block;
+font-size:1.8rem;
+text-transform:uppercase;
+margin-bottom:2rem;
+margin-top: 5rem;
+}
+header p{
+color:white;
+margin:0 auto;
+}
+/* Section
+========================================= */
+.words{
+background:white;
+}
+section{
+border-top:1px solid #eee;
+padding:2rem 0;
+}
+section:first-of-type{
+border-top:none;
+}
+@media (min-width: 40rem){
+section{
+padding:4rem 0;
+}
+}
+/* Clearfix by Nicolas Gallagher
+========================================== */
+
+.clearfix:before,
+.clearfix:after{
+content:" ";
+display:table;
+}
+.clearfix:after{
+clear:both;
+}
+.clearfix{
+*zoom:1;
+}
+nav{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+nav .brand{
+    float: left;
+    height: 100%;
+    line-height: 70px;
+    padding: 0 5px;
+
+}
+nav .brand h2{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    position: relative;
+    display: block;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s; 
+}
+nav ul li a:hover{
+    color: #262626;
+}
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+nav ul li a:hover:before{
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+nav .language{
+    float: right;
+    padding: 10px;
+    height: 100%;
+    line-height: 70px;
+
+}
+        </style>
+    
+    </head>
+    <body>
+
+        <nav>
+            <div class="brand">
+                <img src="#"/>
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="life.html">LIFE</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+            <div class="language">
+                <a href="gallery.html"><img src="img/united-kingdom.png"/></a>
+                <a href="galerija-sr.html"><img src="img/serbia.png"/></a>
+                <a href="index.html"><img src="img/house-building-outline.png"/></a>
+            </div>
+        </nav>
+        <section class="sec1"></section>
+
+        <header class="clearfix">
+                <div class='container'>
+                  <div class="intro">
+                    <h1 style="font-size:4em;font-weight:400;">GALLERY</h1>
+                    <p>Some Of The Pictures You Can See On My Instagram Profile <a href="https://www.instagram.com/mipap.design/" style="color:#fff;">  MIPAP DESIGN</a></p>
+                  </div>
+                </div>
+              </header>
+        <section class="words">
+          <div class="gallery cf">
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/24126815_1414724331982851_8401297571070345216_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/24253934_150495179009718_8194854955761270784_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/24327250_356491311490903_6253434492774514688_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/24331921_182915602290827_7323378530597732352_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/25007483_1038615889613294_2878099529700212736_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/24327879_149170842514104_6109359832010063872_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/25014176_138556186809462_1425469404677668864_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/25012406_754626861401295_6473988639746424832_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/25005302_1795943227083458_2191474270708695040_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/25013723_522847821427053_1046056649493577728_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/25014010_526529234370128_6397109910558998528_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/24838268_1893708757626121_2173836905903292416_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/24838408_238811656656632_589478218357014528_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/e35/24331994_132688000748522_4891667141087985664_n.jpg" />
+            </div>
+            <div>
+              <img src="https://instagram.fbeg1-1.fna.fbcdn.net/t51.2885-15/sh0.08/e35/p640x640/26073369_1774420679529224_4133607354669203456_n.jpg" />
+            </div>
+          </div>
+                <section  class="clearfix"></section>
+                </section>
+                <section  class="clearfix"></section>
+        <section class="words">
+            <div class="container">
+                <p>Miloš Papić Phone: +381(0)638574264 <Address>Ljubomira Ivkovića-Šuce 8, Belgrade, Serbia</Address> </p>
+              <p>All rights reserved for MIPAPdesign Nov2017. Belgrade Serbia <img src="img/serbiaflag.png"> </p>
+        
+            </div>
+          </section>
+
+    </body>
+    </html>
+    <!--  Milos Papic dizajnirao ovaj websajt 0638574264 -->

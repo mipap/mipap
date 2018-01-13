@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MIPAP-DESIGN-WEBSITE</title>
+
+        <link rel="icon" href="img/serbia.png">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/welcome.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+          
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+        <style>
+            
+            html,body{
+    background:url(https://i.pinimg.com/originals/b3/cd/69/b3cd693c99671433c0b1189e785d1e45.jpg) no-repeat center center fixed #ecf0f1;            
+    position:relative;  
+    height:100%;
+    margin:0;
+    padding:0;
+    }
+    .page{
+      font-family:'Lato', sans-serif;
+      display:block;
+      float:left;
+      position:relative;
+      overflow:hidden;
+      width:100%;
+      height:100%;
+    }
+    .loaded{
+      overflow-y:auto;
+    }
+    .main{
+      display:none;
+    }
+    .tl,.tr,.bl,.br{
+      display:block;
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:url(https://i.pinimg.com/originals/b3/cd/69/b3cd693c99671433c0b1189e785d1e45.jpg) no-repeat center center fixed #000;
+      -moz-background-size:cover;
+      background-size:cover;
+    }
+    .tl{
+      top:0;
+      top:-50%;
+      left:-50%;
+    }
+    .tr{
+      top:-50%;
+      left:50%;
+    }
+    /* botton left*/
+    .bl{
+      top:50%;
+      left:50%;
+    }
+    /* botton right*/
+    .br{
+      top:50%;
+      left:-50%;
+    }
+    .enter:after,
+    .enter:hover:after,
+    .enter,.enter:hover{
+      -webkit-transition:all 1s ease;
+      -moz-transition:all 1s ease;
+      -o-transition:all 1s ease;
+      transition:all 1s ease;
+    }
+    .enter{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100px;
+      height: 100px;
+      background-color: #2A2A2B;
+      background-color: rgba(17, 17, 17, 0.67);
+      z-index: 999999999;
+      text-align: center;
+      line-height: 100px;
+      text-decoration: none;
+      color: #FFF;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      -webkit-box-shadow: 0 0 15px 2px #000;
+      -moz-box-shadow: 0 0 15px 2px #000;
+      box-shadow: 0 0 15px 2px #000;
+    }
+    .enter:after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 80px;
+      height: 80px;
+      background-color: #3FB4BE;
+      background-color: rgba(0, 235, 255, 0.44);
+      z-index: 999999999;
+      text-align: center;
+      line-height: 80px;
+      text-decoration: none;
+      color: #FFF;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      -webkit-box-shadow: 0 0 15px 2px #000;
+      -moz-box-shadow: 0 0 15px 2px #000;
+      box-shadow: 0 0 15px 2px #000;
+    }
+    .enter:hover{
+      -webkit-box-shadow:0 0 4px 4px #3FB4BE;
+      -moz-box-shadow:0 0 4px 4px #3FB4BE;
+      box-shadow:0 0 4px 4px #3FB4BE;
+    }
+    .enter:hover:after{
+      background-color: #2A2A2B;
+      background-color: rgba(17, 17, 17, 0.67);
+    }
+    .hideThis{
+      -webkit-box-shadow:0 0 0 0 #3FB4BE;
+      -moz-box-shadow:0 0 0 0 #3FB4BE;
+      box-shadow:0 0 0 0 #3FB4BE;
+      opacity:0;
+      z-index:-5;
+    }
+    *, *:before, *:after{
+      -moz-box-sizing:border-box;
+      -webkit-box-sizing:border-box;
+      box-sizing:border-box;
+    }
+    ::-webkit-scrollbar{
+      background-color:#000;
+      width:5px;
+      height:5px;
+    }
+    ::-webkit-scrollbar-thumb{
+      height:10px;
+      background-color:#333;
+    }
+    html{
+      font:100%/1.5 "lato", sans-serif;
+      font-weight:400;
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+    }
+    @media (min-width: 40rem){
+      html{
+        font-size:112%;
+      }
+    }
+    @media (min-width: 64rem){
+      html{
+        font-size:120%;
+      }
+    }
+    body{
+      background-color:#fff;
+      color:#555;
+    }
+    .container{
+      margin:0 auto;
+      max-width:53rem;
+      width:90%;
+    }
+    /* Header
+    ================================== */
+    
+    body{
+      background:url(https://i.pinimg.com/originals/b3/cd/69/b3cd693c99671433c0b1189e785d1e45.jpg) no-repeat center center fixed #ecf0f1;
+      text-align:center;
+      -moz-background-size:cover;
+      background-size:cover;
+    }
+    .intro{
+      margin:2rem 0;
+    }
+    @media (min-width: 40rem){
+      .intro{
+        margin:4rem 0;
+      }
+    }
+    header h1{
+      color:#fff;
+      padding: 0;
+      display:inline-block;
+      font-size:2.8rem;
+      text-transform:uppercase;
+      margin-bottom:4rem;
+    }
+    header p{
+      color:white;
+      margin:0 auto;
+    }
+    /* Section
+    ========================================= */
+    .words{
+      background:white;
+    }
+    section{
+      border-top:1px solid #eee;
+      padding:2rem 0;
+    }
+    section:first-of-type{
+      border-top:none;
+    }
+    @media (min-width: 40rem){
+      section{
+        padding:4rem 0;
+      }
+    }
+    /* Clearfix by Milos Papic
+    ========================================== */
+    
+    .clearfix:before,
+    .clearfix:after{
+      content:" ";
+      display:table;
+    }
+    .clearfix:after{
+      clear:both;
+    }
+    .clearfix{
+      *zoom:1;
+    }
+    form {
+  width: 50%;
+  margin: 0 auto;
+}
+form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+form .field label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #313a3d;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+form .field label + span {
+  font-family: "SSStandard";
+  opacity: 0;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #cd6302;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+form .field input[type="text"],
+form .field textarea {
+  border: none;
+  background: #e8e9ea;
+  width: 85%;
+  margin: 0;
+  padding: 18px 0;
+  padding-left: 19.5%;
+  color: #313a3d;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+form .field input[type="text"]#msg,
+form .field textarea#msg {
+  height: 60px;
+  resize: none;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+form .field input[type="text"]:focus, form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+}
+form .field input[type="text"]:focus#msg, form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+}
+form .field input[type="text"]:focus + label, form .field input[type="text"].focused + label,
+form .field textarea:focus + label,
+form .field textarea.focused + label {
+  width: 20%;
+  background: #fd9638;
+  color: #313a3d;
+}
+form .field input[type="text"].focused + label,
+form .field textarea.focused + label {
+  color: #fd9638;
+}
+form .field:hover label {
+  width: 18%;
+  background: #313a3d;
+  color: white;
+}
+form input[type="submit"] {
+  background: #fd9638;
+  color: white;
+  -webkit-appearance: none;
+  border: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1.4em;
+  letter-spacing: 0.1em;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+form input[type="submit"]:hover {
+  background: #313a3d;
+  color: #fd9638;
+}
+form input[type="submit"]:focus {
+  outline: none;
+  background: #cd6302;
+}    
+            </style>
+
+            
+    </head>
+    <body>
+    <nav>
+        <div class="brand">
+            <img src="#"/>
+        </div>
+        <ul>
+            <li><a href="index-sr.html">POČETNA</a></li>
+            <li><a href="portfolio-sr.html">PORTFOLIO</a></li>
+            <li><a href="zivot-sr.html">ŽIVOT</a></li>
+            <li><a href="galerija-sr.html">GALERIJA</a></li>
+            <li><a href="kontakt-sr.html">KONTAKT</a></li>
+        </ul>
+        <div class="language">
+            <a href="contact.html"><img src="img/united-kingdom.png"/></a>
+            <a href="kontakt-sr.html"><img src="img/serbia.png"/></a>
+            <a href="index-sr.html"><img src="img/house-building-outline.png"/></a>
+        </div>
+    </nav>
+    <section class="sec1"></section>
+<!--  Content of page -->
+    <header class="clearfix">
+        <div class='container'>
+          <div class="intro">
+            <a href="contact.html"><h1>KONTAKT</h1></a>
+            <p>Slobodno pitajte šta god Vas zanima o aktivnostima naše kompanije.</p>
+          </div>
+        </div>
+      </header>
+      <form action="https://formspree.io/office@mipap-design.in.rs" method="POST">
+        <div class="field name-box">
+                  <input type="text" id="name" placeholder="Vaše ime?" name="name"/>
+                  <label for="name">Ime</label>
+                  <span class="ss-icon">check</span>
+                  
+        </div>
+
+        <div class="field email-box">
+                  <input type="text" id="email" placeholder="ime@emajl.rs" name="_replyto"/>
+                  <label for="email">E-pošta</label>
+                  <span class="ss-icon">check</span>
+        </div>
+
+        <div class="field msg-box">
+                  <textarea id="msg" rows="4" placeholder="Vaša poruka..." name="message"/></textarea>
+                  <label for="msg">Poruka</label>
+                  <span class="ss-icon">check</span>
+        </div>
+
+        <input class="button" type="submit" value="Pošalji" />
+</form>
+      <section class="words">
+        <div class="container">
+          <h3>Gde nas možete pronaći?</h3>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2834.706609733605!2d20.4282398!3d44.725599!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a722581be032b%3A0x14c2e6697aa0dadc!2sLjubomira+Ivkovic%CC%81a+%C5%A0uce%2C+Beograd!5e0!3m2!1sen!2srs!4v1510921000005" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+        </section>
+
+<section class="clearfix"></section>        
+<section class="words">
+    <div class="container">
+        <p>Miloš Papić Phone: +381(0)638574264 <Address>Ljubomira Ivkovića-Šuce 8, Beograd, Srbija</Address> </p>
+      <p>Sva prava zadržana MIPAPdesign Nov2017. Beograd Srbija <img src="img/serbiaflag.png"> </p>
+
+    </div>
+  </section>
+<!--  Content of page -->
+    </body>
+</html>    
+<!--  Milos Papic dizajnirao ovaj websajt 0638574264 -->

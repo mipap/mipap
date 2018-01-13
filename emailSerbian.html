@@ -1,0 +1,765 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta charset="UTF-8">
+        <title>Happy Holiday MIPAP Design</title>
+        <link rel="icon" href="img/santa-claus.png">
+        <style type="text/css">
+        /* CSS ide ovde*/
+        @import url(https://fonts.googleapis.com/css?family=Raleway:100,400);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,400);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+html{
+  display:none;
+  opacity:0;
+  transition:opacity 1s ease;
+}
+
+#projectContainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+}
+
+#projectContainer * {
+  -o-transition: all .7s ease;
+  -moz-transition: all .7s ease;
+  -webkit-transition: all .7s ease;
+  -ms-transition: all .7s ease;
+  transition: all .7s ease;
+}
+
+.message {
+  -o-transition: transform .7s, left 2s ease, block 0s;
+  -moz-transition: transform .7s, left 2s ease, block 0s;
+  -webkit-transition: transform .7s, left 2s, block 0s;
+  -ms-transition: transform .7s, left 2s, block 0s;
+  transition: transform .7s, left 2s, block 0s;
+  color: #333;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+  /*padding-left:1vw;
+  padding-right:1vw;*/
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow:hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+}
+
+.messageContent{
+  width:100%;
+  height:100%;
+  background-color:transparent;
+  position:relative;
+  z-index:10000;
+  overflow:auto;
+}
+
+* {
+  font-family: 'Raleway', sans-serif;
+  /*font-family: 'Lato', sans-serif;*/
+  font-weight: 100;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+/*specific message styles*/
+
+.superTextContainer {
+  position: absolute;
+  top: 50%;
+  -o-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  width: 100%;
+  /*padding-right:2vw;*/
+  -o-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -ms-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+.textContainer {
+  margin: auto;
+  display: auto;
+  color: #333;
+  text-align: center;
+  font-size: 10vh;
+}
+
+#messageOneBow {
+  /*width:90%;*/
+  width: 10vh;
+  height: 5vh;
+  margin: auto;
+  max-height: 50px;
+  background: #FF2F30;
+  margin-top: 5vh;
+  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#messageOneBow div {
+  -o-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -webkit-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  width: 0vh;
+}
+
+#messageOneBow div:nth-child(1) {
+  margin: auto;
+  /*width: 10vh;*/
+  height: 10vh;
+  background-color: #FF2F30;
+  max-width: 10vh;
+  box-shadow: 0px 0px 20px #333;
+  box-shadow: 0px 0px 2vh #333;
+  -o-transform: rotate(45deg) translate(-18%, -18%);
+  -moz-transform: rotate(45deg) translate(-18%, -18%);
+  -webkit-transform: rotate(45deg) translate(-18%, -18%);
+  -ms-transform: rotate(45deg) translate(-18%, -18%);
+  transform: rotate(45deg) translate(-18%, -18%);
+}
+
+#messageOneBow div:nth-child(2) {
+  margin: auto;
+  /*width: 8vh;*/
+  height: 8vh;
+  background-color: #FF2F30;
+  box-shadow: 0px 0px 20px #333;
+  box-shadow: 0px 0px 2vh #333;
+  position: absolute;
+  left: 50%;
+  -o-transform: translate(-50%, -145%);
+  -moz-transform: translate(-50%, -145%);
+  -webkit-transform: translate(-50%, -145%);
+  -ms-transform: translate(-50%, -145%);
+  transform: translate(-50%, -145%);
+}
+
+#scrollButtonDown {
+  color: #333;
+  font-size: 3vh;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  opacity: 0;
+  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  line-height: 3vh;
+  padding-bottom: 1vh;
+}
+
+#scrollButtonUp {
+  color: #333;
+  font-size: 3vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  opacity: 0;
+  display: none;
+  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  line-height: 3vh;
+  padding-top: 1vh;
+  z-index: 100000000;
+}
+
+[data-zoom] {
+  -o-transform: scale(.8);
+  -moz-transform: scale(.8);
+  -webkit-transform: scale(.8);
+  -ms-transform: scale(.8);
+  transform: scale(.8);
+}
+
+#audioControls{
+  position:fixed;
+  bottom:0;
+  left:0;
+  color:#333;
+  cursor:default;
+  width:32px;
+  height:32px;
+  padding-bottom:4px;
+  padding-left:4px;
+  background-repeat:no-repeat;
+  background-position:-99999px -99999px;
+  -o-transition:all .5s ease;
+  -moz-transition:all .5s ease;
+  -webkit-transition:all .5s ease;
+  -ms-transition:all .5s ease;
+  transition:all .5s ease;
+}
+
+[audioPlaying]{
+  background-image:url(https://onedrive.live.com/download?resid=C20DCB16FD6A5AD7!14810&authkey=!AFO1dARdZbNCC2A&v=3&ithint=photo%2cpng);
+  background-position:center center !important;
+}
+
+[audioPaused]{
+  background-image:url(https://onedrive.live.com/download?resid=C20DCB16FD6A5AD7!14809&authkey=!ALnTNX5dB_dSVXg&v=3&ithint=photo%2cpng);
+  background-position:center center !important;
+}
+
+#hiddenImages{
+    background-image: url(https://onedrive.live.com/download?resid=C20DCB16FD6A5AD7!14809&authkey=!ALnTNX5dB_dSVXg&v=3&ithint=photo%2cpng), url(https://onedrive.live.com/download?resid=C20DCB16FD6A5AD7!14810&authkey=!AFO1dARdZbNCC2A&v=3&ithint=photo%2cpng);
+    display:none;
+}
+
+.snowFlakes{
+  position:fixed;
+  z-index:10000;
+  z-index:-1;
+}
+
+.snowflakeYContainer{
+  -webkit-animation:snowflakeY 60s infinite linear;
+  -ms-animation:snowflakeY 60s infinite linear;
+  -moz-animation:snowflakeY 60s infinite linear;
+  -o-animation:snowflakeY 60s infinite linear;
+  animation:snowflakeY 60s infinite linear;
+  height:1000vh;
+  width:100vw;
+  position:absolute;
+  /*top:-1092vh;*/
+  top:-892vh;
+  -o-transition:left 5s linear !important;
+  -moz-transition:left 5s linear !important;
+  -webkit-transition:left 5s linear !important;
+  -ms-transition:left 5s linear !important;
+  transition:left 5s linear !important;
+}
+
+@-ms-keyframes snowflakeY{
+  0%{
+    top:-992vh;
+  }
+  100%{
+    top:-92vh;
+  }
+}
+
+@-webkit-keyframes snowflakeY{
+  0%{
+    top:-992vh;
+  }
+  100%{
+    top:-92vh;
+  }
+}
+
+@-moz-keyframes snowflakeY{
+  0%{
+    top:-992vh;
+  }
+  100%{
+    top:-92vh;
+  }
+}
+
+@-o-keyframes snowflakeY{
+  0%{
+    top:-992vh;
+  }
+  100%{
+    top:-92vh;
+  }
+}
+
+@keyframes snowflakeY{
+  0%{
+    top:-892vh;
+  }
+  100%{
+    top:-92vh;
+  }
+}
+
+.snowflake{
+  border-radius:50%;
+  border:1px solid #333;
+  position:absolute;
+}
+        </style>
+    </head>
+    <body>
+
+            <div id="projectContainer">
+                    <div id="scrollButtonUp" class="scrollIndicator">
+                      <span style="font-size:4vh; color:#333; line-height:4vh;">&#x21d1;</span>
+                      <br> Skroluj gore
+                    </div>
+                    <div id="projectContainer">
+                      <div id="messageOne" class="message" style="display:block;">
+                      <div class="messageContent">
+                        <div class="superTextContainer">
+                          <div class="textContainer">
+                            Dragi prijatelji,        </div>
+                          <div id="messageOneBow">
+                            <div></div>
+                            <div></div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                      <div id="messageTwo" class="message">
+                        <div class="superTextContainer">
+                          <div class="textContainer" style="font-size:7vh;">
+                            Hvala na odvojenom vremenu!
+                          </div>
+                        </div>
+                      </div>
+                    <div id="messageThree" class="message">
+                      <div class="superTextContainer">
+                        <div class="textContainer" style="font-size:7vh; padding-left:2vw; padding-right:2vw;">
+                          Vreme praznika je uvek dobro za kreiranje nečeg lepog!
+                        </div>
+                      </div>
+                    </div>
+                    <div id="messageFour" class="message">
+                      <div class="superTextContainer">
+                        <div class="textContainer" style="font-size:7vh; padding-left:2vw; padding-right:2vw;">
+                          Zato vam hvala što podržavate moj rad!
+                        </div>
+                      </div>
+                    </div>
+                    <div id="messageFive" class="message">
+                      <div class="superTextContainer">
+                        <div class="textContainer" style="font-size:7vh; padding-left:2vw; padding-right:2vw;">
+                          Provedite ove praznike u slozi i veselju sa vašim najvoljenijima...
+                        </div>
+                      </div>
+                    </div>
+                    <div id="messageSix" class="message">
+                      <div class="superTextContainer">
+                        <div class="textContainer" style="color:#ff0000; font-weight:400;">
+                          Srećan Božić</br>
+                          Srećna i Nova 2018.godina
+                        </div>
+                      </div>
+                    </div>
+                    <div id="messageSeven" class="message">
+                      <div class="superTextContainer">
+                        <div class="textContainer" style="font-size:50vh; line-height:50vh;">
+                          <img style="-o-transform:translate(0%,-25%);-moz-transform:translate(0%,-25%);-webkit-transform:translate(0%,-25%);-ms-transform:translate(0%,-25%);transform:translate(0%,-25%);margin-top:150px;" src="https://pbs.twimg.com/profile_images/774007491130785792/hAtxoNuW.jpg">
+                          <div style="font-size:4vh;color:#333; font-weight:400; line-height:4vh !important;">
+                          Srdačan pozdrav Miloš Papić...
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="scrollButtonDown" class="scrollIndicator">
+                      Skroluj dole
+                      <br><span style="font-size:4vh; color:#333; line-height:4vh;">&#x21d3;</span>
+                    </div>
+                    <div id="audioControls">
+                    </div>
+                  </div>
+                  <div id="hiddenImages">
+                    <img audioPaused src="">
+                    <img audioPlaying src="">
+                  </div>
+
+                  <script>
+
+                        window.addEventListener('load', function() {
+                            var superContainer = document.documentElement;
+                          var scrollIndicatorTransitionTime = 1000; 
+                          
+                          createSnowFlakes();
+                          function createSnowFlakes(){
+                              var xLimit = Math.floor(window.innerWidth/100)*10;
+                            var yLimit = Math.floor(window.innerHeight/20)*10;
+                            var snowflakeContainers = document.getElementsByClassName('snowFlakes');
+                            var snowflakeContainers = document.getElementsByClassName('snowFlakes');
+                            for(var i = 0; i < snowflakeContainers.length; i++){
+                                snowflakeContainers[i].children[0].innerHTML = '';
+                            }
+                            for(var i = 0; i < snowflakeContainers.length; i++){
+                                var currentContainer = snowflakeContainers[i];
+                              var currentYContainer = snowflakeContainers[i].getElementsByClassName('snowflakeYContainer')[0];
+                              for(var k = 0; k < yLimit; k++){
+                                  //y pahulje
+                                var snowflake = document.createElement('div');
+                                snowflake.className = 'snowflake';
+                                var dimensions = getRandomDimensions();
+                                snowflake.style.width = dimensions;
+                                snowflake.style.height = dimensions;
+                                snowflake.style.top = getRandomYPosition();
+                                snowflake.style.left = getRandomXPosition();
+                                   currentYContainer.appendChild(snowflake);
+                              }
+                            }
+                            function getRandomDimensions(){
+                                return Math.floor(Math.random()*(6 - 2 +1))+2+'px';
+                            }
+                            function getRandomYPosition(){
+                                return Math.floor(Math.random()*10*window.innerHeight)+'px';
+                            }
+                            function getRandomXPosition(){
+                                return Math.floor(Math.random()*window.innerWidth)+'px';
+                            }
+                          }
+                          window.setInterval(function(){
+                            var snowflakeYContainers = document.getElementsByClassName('snowflakeYContainer');
+                            var randomYContainer = snowflakeYContainers[Math.floor(Math.random()*snowflakeYContainers.length)];
+                            randomYContainer.style.left = Math.floor(Math.random()*30)+'vw';
+                          },500);
+                        
+                            //audio fajlovi
+                          //Google Source: https://drive.google.com/uc?export=download&id=0By6dnJL49jq5bm5Wdlg3dkd6a0U
+                          //OneDrive Source: https://onedrive.live.com/download?resid=C20DCB16FD6A5AD7!14808&authkey=!AKAieQ_rmjmhzNs&ithint=file%2cmp3
+                          var backgroundAudio = new Audio("https://drive.google.com/uc?export=download&id=0By6dnJL49jq5bm5Wdlg3dkd6a0U");
+                          var controls = document.getElementById('audioControls')
+                          var audioLoaded = false;
+                            backgroundAudio.oncanplaythrough = function() {
+                            audioLoaded = true;
+                            backgroundAudio.play();
+                            controls.setAttribute('audioPlaying','');
+                            };
+                          backgroundAudio.onended = function() {
+                            this.currentTime = 0;
+                            this.play();
+                            };
+                          window.setTimeout(function(){
+                              if(!audioLoaded){
+                                backgroundAudio = null;
+                              controls.style.display = 'none';
+                              console.error("Loading of audio is taking longer than 10 seconds; cancel loading");
+                            }
+                          },10000);
+                        
+                            
+                          document.getElementById('audioControls').onmousedown = function(){
+                              if(backgroundAudio){
+                                if(backgroundAudio.paused){
+                                    backgroundAudio.play();
+                                controls.removeAttribute('audioPaused')
+                                controls.setAttribute('audioPlaying','');
+                              }else{
+                                  backgroundAudio.pause();
+                                controls.removeAttribute('audioPlaying');
+                                controls.setAttribute('audioPaused','');
+                              }
+                            }
+                          };
+                        
+                          
+                          var messages = document.getElementsByClassName('message');
+                          messages[0].setAttribute('data-x-pos', '0vw');
+                          for (var i = 1; i < messages.length; i++) {
+                            messages[i].style.display = 'none';
+                            messages[i].setAttribute('data-x-pos', i * 100 + 'vw');
+                            messages[i].style.left = i * 100 + 'vw';
+                          }
+                          //kreiraj pahulje u svakoj poruci
+                          for(var i = 0; i < messages.length; i++){
+                              var snowflakeContainer = document.createElement('div');
+                            snowflakeContainer.className = 'snowFlakes';
+                            //var snowflakeXContainer = document.createElement('div');
+                            //snowflakeXContainer.className = 'snowflakeXContainer';
+                            var snowflakeYContainer = document.createElement('div');
+                            snowflakeYContainer.className = 'snowflakeYContainer';
+                            //snowflakeContainer.appendChild(snowflakeXContainer);
+                            snowflakeContainer.appendChild(snowflakeYContainer);
+                            messages[i].appendChild(snowflakeContainer);
+                          }
+                             //kreiraj pahulje
+                          createSnowFlakes();
+                          
+                          
+                            superContainer.style.display = 'block';
+                          window.setTimeout(function(){
+                              superContainer.style.opacity = '1';
+                          },0);
+                        
+                          
+                          window.setTimeout(function(){
+                              document.getElementById('messageOneBow').style.width = '90%';
+                              var bowDivs = document.getElementById('messageOneBow').getElementsByTagName('div');
+                              bowDivs[0].style.width = '10vh';
+                              bowDivs[1].style.width = '8vh';
+                          },0);
+                        
+                          var scrollStatus = {
+                            wheeling: false,
+                            functionCall: false,
+                            swappingMessages: false
+                          };
+                        
+                          var steps = {
+                            nextStep: function(elem) {
+                              
+                              if (messages[this.currentStep.index + 1]) {
+                                scrollStatus.swappingMessages = true;
+                                elem.setAttribute('data-zoom', '');
+                                this.currentStep.index++; 
+                                this.currentStep.elem = messages[this.currentStep.index];
+                                var currentIndex = this.currentStep.index;
+                                var previousStep = messages[this.currentStep.index - 1];
+                                var currentStep = this.currentStep.elem;
+                                currentStep.style.display = 'block';
+                                window.setTimeout(function() {
+                                  //alert(currentStep.style.left)
+                                  window.setTimeout(function() {
+                                    currentStep.style.left = '0vw';
+                                  }, 20);
+                                
+                                  if (currentIndex > 0) {
+                                    
+                                    scrollIndicators.visibility(true, 'up');
+                                  } else {
+                                    scrollIndicators.visibility(false, 'up')
+                                  }
+                                  if (currentIndex + 1 < messages.length) {
+                                    
+                                    scrollIndicators.visibility(true, 'down');
+                                  } else {
+                                    scrollIndicators.visibility(false, 'down');
+                                  }
+                                }, 0);
+                                currentStep.setAttribute('data-zoom', '');
+                                window.setTimeout(function() {
+                                  //zoom in sledeću poruku
+                                  currentStep.removeAttribute('data-zoom');
+                                  window.setTimeout(function() {
+                                    
+                                    previousStep.removeAttribute('data-zoom');
+                                    previousStep.style.display = 'none';
+                                    window.setTimeout(function() {
+                                      scrollStatus.swappingMessages = false;
+                                    }, 700);
+                                    //previousStep.style.left = previousStep.getAttribute('data-x-pos');
+                                  }, 700);
+                                }, 300);
+                              }
+                            },
+                            previousStep: function(elem) {
+                              
+                              if (messages[this.currentStep.index - 1]) {
+                                scrollStatus.swappingMessages = true;
+                                window.setTimeout(function() {
+                                  elem.setAttribute('data-zoom', ''); //zoom od
+                                }, 0);
+                                this.currentStep.index--; 
+                                this.currentStep.elem = messages[this.currentStep.index];
+                                var currentIndex = this.currentStep.index; 
+                                var previousStep = messages[this.currentStep.index + 1]; 
+                                var currentStep = this.currentStep.elem; 
+                                currentStep.style.display = 'block';
+                                window.setTimeout(function() {
+                                  window.setTimeout(function() {
+                                    previousStep.style.left = previousStep.getAttribute('data-x-pos');
+                                  }, 20);
+                                  
+                                  if (currentIndex > 0) {
+                                    
+                                    scrollIndicators.visibility(true, 'up');
+                                  } else {
+                                    scrollIndicators.visibility(false, 'up')
+                                  }
+                                  if (currentIndex + 1 < messages.length) {
+                                    
+                                    scrollIndicators.visibility(true, 'down');
+                                  } else {
+                                    scrollIndicators.visibility(false, 'down');
+                                  }
+                                  window.setTimeout(function() {
+                                    currentStep.setAttribute('data-zoom', '');
+                                  }, 0);
+                                  window.setTimeout(function() {
+                                    //zoom in
+                                    window.setTimeout(function() {
+                                      currentStep.removeAttribute('data-zoom');
+                                    }, 0);
+                                    window.setTimeout(function() {
+                                      window.setTimeout(function() {
+                                        previousStep.removeAttribute('data-zoom');
+                                      }, 0);
+                                      window.setTimeout(function() {
+                                        previousStep.style.display = 'none';
+                                      }, 0);
+                                      window.setTimeout(function() {
+                                        scrollStatus.swappingMessages = false;
+                                      }, 700);
+                                      //previousStep.style.left = previousStep.getAttribute('data-x-pos');
+                                    }, 700);
+                                  }, 300);
+                                }, 0);
+                              }
+                            },
+                            currentStep: {
+                              elem: messages[0],
+                              index: 0
+                            },
+                            allSteps: document.getElementsByClassName('message')
+                          };
+                        
+                          var scrollIndicators = {
+                            visibility: function(visible, which) {
+                              if (visible) {
+                                //prikazivanje
+                                switch (which) {
+                                  case "all":
+                                    //prikaz svih skrol indikatora
+                                    var scrollIndicatorElem = document.getElementsByClassName('scrollIndicator');
+                                    for (var i = 0; i < scrollIndicatorElem.length; i++) {
+                                      scrollIndicatorElem[i].style.display = 'block';
+                                      window.setTimeout(function() {
+                                        scrollIndicatorElem[i].style.opacity = '1';
+                                      }, scrollIndicatorTransitionTime);
+                                    }
+                                    break;
+                                  case 'up':
+                                    //prikaz skrol gore indikatora
+                                    var scrollIndicatorElem = document.getElementsByClassName('scrollIndicator');
+                                    scrollIndicatorElem[0].style.display = 'block';
+                                    window.setTimeout(function() {
+                                      scrollIndicatorElem[0].style.opacity = '1';
+                                    }, scrollIndicatorTransitionTime);
+                                    break;
+                                  case 'down':
+                                    //prikaz skrol dole indikatora
+                                    var scrollIndicatorElem = document.getElementsByClassName('scrollIndicator');
+                                    scrollIndicatorElem[1].style.display = 'block';
+                                    window.setTimeout(function() {
+                                      scrollIndicatorElem[1].style.opacity = '1';
+                                    }, scrollIndicatorTransitionTime);
+                                    break;
+                                  default:
+                                    console.error("'which' for scrollIndicator visibility() function not defined");
+                                    break;
+                                }
+                              } else {
+                                //skrivanje
+                                switch (which) {
+                                  case "all":
+                                    //kriti sve skrol dugmiće
+                                    var scrollIndicatorElem = document.getElementsByClassName('scrollIndicator');
+                                    for (var i = 0; i < scrollIndicatorElem.length; i++) {
+                                      scrollIndicatorElem[i].style.opacity = '0';
+                                      window.setTimeout(function() {
+                                        scrollIndicatorElem[i].style.display = 'none';
+                                      }, scrollIndicatorTransitionTime);
+                                    }
+                                    break;
+                                  case 'up':
+                                    //kriti gore skrol dugme
+                                    var scrollIndicatorElem = document.getElementsByClassName('scrollIndicator');
+                                    scrollIndicatorElem[0].style.opacity = '0';
+                                    window.setTimeout(function() {
+                                      scrollIndicatorElem[0].style.display = 'none';
+                                    }, scrollIndicatorTransitionTime);
+                                    break;
+                                  case 'down':
+                                    //kriti dole skrol dugme
+                                    var scrollIndicatorElem = document.getElementsByClassName('scrollIndicator');
+                                    scrollIndicatorElem[1].style.opacity = '0';
+                                    window.setTimeout(function() {
+                                      scrollIndicatorElem[1].style.display = 'none';
+                                    }, scrollIndicatorTransitionTime);
+                                    break;
+                                  default:
+                                    console.error("'which' for scrollIndicator visibility() function not defined");
+                                    break;
+                                }
+                              }
+                            }
+                          };
+                        
+                          //prikaz skrol dugmeta
+                          scrollIndicators.visibility(true, 'down');
+                        
+                          window.addEventListener('wheel', function(e) {
+                            scrollStatus.wheeling = true;
+                            if (!scrollStatus.functionCall) {
+                              parseScroll(e);
+                              scrollStatus.functionCall = true;
+                            }
+                            scrollStatus.wheeling = false;
+                            scrollStatus.functionCall = false;
+                          });
+                        
+                          function parseScroll(e) {
+                            if (e.deltaY > 0) {
+                              //kretnja na sledeću poruku
+                              if (!scrollStatus.swappingMessages) {
+                                steps.nextStep(steps.currentStep.elem);
+                              }
+                            }
+                            if (e.deltaY < 0) {
+                              //kretnja na predhodnu poruku
+                              if (!scrollStatus.swappingMessages) {
+                                steps.previousStep(steps.currentStep.elem);
+                              }
+                            }
+                          }
+                          
+                          var resizeTimeout = false;
+                          window.addEventListener('resize',function(){
+                            window.clearTimeout(resizeTimeout);
+                            resizeTimeout = window.setTimeout(function(){
+                                createSnowFlakes();
+                            },100);
+                          });
+                          window.addEventListener('scroll',function(e){
+                              console.log('scrolled');
+                            e.preventDefault();
+                              return false;
+                          });
+                        });
+                            
+                            
+                            </script>
+
+                        <script>
+                            /*! modernizr 3.5.0 (Custom Build) | MIT *
+                            * https://modernizr.com/download/?-animation-audio-forcetouch-touchevents-setclasses !*/
+                            !function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,i,a,s;for(var u in C)if(C.hasOwnProperty(u)){if(e=[],n=C[u],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)a=e[i],s=a.split("."),1===s.length?Modernizr[s[0]]=o:(!Modernizr[s[0]]||Modernizr[s[0]]instanceof Boolean||(Modernizr[s[0]]=new Boolean(Modernizr[s[0]])),Modernizr[s[0]][s[1]]=o),h.push((o?"":"no-")+s.join("-"))}}function i(e){var n=w.className,t=Modernizr._config.classPrefix||"";if(T&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),T?w.className.baseVal=n:w.className=n)}function a(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):T?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function s(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function u(){var e=n.body;return e||(e=a(T?"svg":"body"),e.fake=!0),e}function l(e,t,r,o){var i,s,l,f,c="modernizr",p=a("div"),d=u();if(parseInt(r,10))for(;r--;)l=a("div"),l.id=o?o[r]:c+(r+1),p.appendChild(l);return i=a("style"),i.type="text/css",i.id="s"+c,(d.fake?d:p).appendChild(i),d.appendChild(p),i.styleSheet?i.styleSheet.cssText=e:i.appendChild(n.createTextNode(e)),p.id=c,d.fake&&(d.style.background="",d.style.overflow="hidden",f=w.style.overflow,w.style.overflow="hidden",w.appendChild(d)),s=t(p,e),d.fake?(d.parentNode.removeChild(d),w.style.overflow=f,w.offsetHeight):p.parentNode.removeChild(p),!!s}function f(e,n){return!!~(""+e).indexOf(n)}function c(e,n){return function(){return e.apply(n,arguments)}}function p(e,n,t){var o;for(var i in e)if(e[i]in n)return t===!1?e[i]:(o=n[e[i]],r(o,"function")?c(o,t||n):o);return!1}function d(n,t,r){var o;if("getComputedStyle"in e){o=getComputedStyle.call(e,n,t);var i=e.console;if(null!==o)r&&(o=o.getPropertyValue(r));else if(i){var a=i.error?"error":"log";i[a].call(i,"getComputedStyle returning null, its possible modernizr test results are inaccurate")}}else o=!t&&n.currentStyle&&n.currentStyle[r];return o}function m(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function v(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(m(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];o--;)i.push("("+m(n[o])+":"+r+")");return i=i.join(" or "),l("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==d(e,null,"position")})}return t}function y(e,n,o,i){function u(){c&&(delete A.style,delete A.modElem)}if(i=r(i,"undefined")?!1:i,!r(o,"undefined")){var l=v(e,o);if(!r(l,"undefined"))return l}for(var c,p,d,m,y,g=["modernizr","tspan","samp"];!A.style&&g.length;)c=!0,A.modElem=a(g.shift()),A.style=A.modElem.style;for(d=e.length,p=0;d>p;p++)if(m=e[p],y=A.style[m],f(m,"-")&&(m=s(m)),A.style[m]!==t){if(i||r(o,"undefined"))return u(),"pfx"==n?m:!0;try{A.style[m]=o}catch(h){}if(A.style[m]!=y)return u(),"pfx"==n?m:!0}return u(),!1}function g(e,n,t,o,i){var a=e.charAt(0).toUpperCase()+e.slice(1),s=(e+" "+P.join(a+" ")+a).split(" ");return r(n,"string")||r(n,"undefined")?y(s,n,o,i):(s=(e+" "+O.join(a+" ")+a).split(" "),p(s,n,t))}var h=[],C=[],_={_version:"3.5.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){C.push({name:e,fn:n,options:t})},addAsyncTest:function(e){C.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=_,Modernizr=new Modernizr;var w=n.documentElement,T="svg"===w.nodeName.toLowerCase();Modernizr.addTest("audio",function(){var e=a("audio"),n=!1;try{n=!!e.canPlayType,n&&(n=new Boolean(n),n.ogg=e.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,""),n.mp3=e.canPlayType('audio/mpeg; codecs="mp3"').replace(/^no$/,""),n.opus=e.canPlayType('audio/ogg; codecs="opus"')||e.canPlayType('audio/webm; codecs="opus"').replace(/^no$/,""),n.wav=e.canPlayType('audio/wav; codecs="1"').replace(/^no$/,""),n.m4a=(e.canPlayType("audio/x-m4a;")||e.canPlayType("audio/aac;")).replace(/^no$/,""))}catch(t){}return n});var S=function(){function e(e,n){var o;return e?(n&&"string"!=typeof n||(n=a(n||"div")),e="on"+e,o=e in n,!o&&r&&(n.setAttribute||(n=a("div")),n.setAttribute(e,""),o="function"==typeof n[e],n[e]!==t&&(n[e]=t),n.removeAttribute(e)),o):!1}var r=!("onblur"in n.documentElement);return e}();_.hasEvent=S;var b=_._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];_._prefixes=b,Modernizr.addTest("webanimations","animate"in a("div"));var x=_.testStyles=l;Modernizr.addTest("touchevents",function(){var t;if("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch)t=!0;else{var r=["@media (",b.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join("");x(r,function(e){t=9===e.offsetTop})}return t});var E="Moz O ms Webkit",P=_._config.usePrefixes?E.split(" "):[];_._cssomPrefixes=P;var z=function(n){var r,o=b.length,i=e.CSSRule;if("undefined"==typeof i)return t;if(!n)return!1;if(n=n.replace(/^@/,""),r=n.replace(/-/g,"_").toUpperCase()+"_RULE",r in i)return"@"+n;for(var a=0;o>a;a++){var s=b[a],u=s.toUpperCase()+"_"+r;if(u in i)return"@-"+s.toLowerCase()+"-"+n}return!1};_.atRule=z;var O=_._config.usePrefixes?E.toLowerCase().split(" "):[];_._domPrefixes=O;var N={elem:a("modernizr")};Modernizr._q.push(function(){delete N.elem});var A={style:N.elem.style};Modernizr._q.unshift(function(){delete A.style}),_.testAllProps=g;var j=_.prefixed=function(e,n,t){return 0===e.indexOf("@")?z(e):(-1!=e.indexOf("-")&&(e=s(e)),n?g(e,n,t):g(e,"pfx"))};Modernizr.addTest("forcetouch",function(){return S(j("mouseforcewillbegin",e,!1),e)?MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN&&MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN:!1}),o(),i(h),delete _.addTest,delete _.addAsyncTest;for(var R=0;R<Modernizr._q.length;R++)Modernizr._q[R]();e.Modernizr=Modernizr}(window,document);                        
+                        </script>
+
+
+    </body>
+</html>
